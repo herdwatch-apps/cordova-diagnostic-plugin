@@ -81,6 +81,7 @@
 
         <framework src="CoreBluetooth.framework" />
 
+        <!--
         <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
             <string>This app requires Bluetooth access to function properly.</string>
         </config-file>
@@ -88,6 +89,7 @@
         <config-file target="*-Info.plist" parent="NSBluetoothAlwaysUsageDescription">
             <string>This app requires constant Bluetooth access to function properly.</string>
         </config-file>
+        -->
         <!--END_MODULE BLUETOOTH-->
 
         <!--BEGIN_MODULE WIFI-->
@@ -106,7 +108,7 @@
         <source-file src="src/ios/Diagnostic_Wifi.m" />
         <!--END_MODULE WIFI-->
 
-        <!--BEGIN_MODULE CAMERA-->
+        <!--BEGIN_MODULE CAMERA--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Camera">
                 <param name="ios-package" value="Diagnostic_Camera" />
@@ -132,9 +134,9 @@
 
         <header-file src="src/ios/Diagnostic_Camera.h" />
         <source-file src="src/ios/Diagnostic_Camera.m" />
-        <!--END_MODULE CAMERA-->
+        --><!--END_MODULE CAMERA-->
 
-        <!--BEGIN_MODULE NOTIFICATIONS-->
+        <!--BEGIN_MODULE NOTIFICATIONS--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Notifications">
                 <param name="ios-package" value="Diagnostic_Notifications" />
@@ -150,9 +152,9 @@
 
         <header-file src="src/ios/Diagnostic_Notifications.h" />
         <source-file src="src/ios/Diagnostic_Notifications.m" />
-        <!--END_MODULE NOTIFICATIONS-->
+        --><!--END_MODULE NOTIFICATIONS-->
 
-        <!--BEGIN_MODULE MICROPHONE-->
+        <!--BEGIN_MODULE MICROPHONE--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Microphone">
                 <param name="ios-package" value="Diagnostic_Microphone" />
@@ -172,9 +174,9 @@
 
         <header-file src="src/ios/Diagnostic_Microphone.h" />
         <source-file src="src/ios/Diagnostic_Microphone.m" />
-        <!--END_MODULE MICROPHONE-->
+        --><!--END_MODULE MICROPHONE-->
 
-        <!--BEGIN_MODULE CONTACTS-->
+        <!--BEGIN_MODULE CONTACTS--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Contacts">
                 <param name="ios-package" value="Diagnostic_Contacts" />
@@ -195,9 +197,9 @@
 
         <header-file src="src/ios/Diagnostic_Contacts.h" />
         <source-file src="src/ios/Diagnostic_Contacts.m" />
-        <!--END_MODULE CONTACTS-->
+        --><!--END_MODULE CONTACTS-->
 
-        <!--BEGIN_MODULE CALENDAR-->
+        <!--BEGIN_MODULE CALENDAR--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Calendar">
                 <param name="ios-package" value="Diagnostic_Calendar" />
@@ -217,9 +219,9 @@
 
         <header-file src="src/ios/Diagnostic_Calendar.h" />
         <source-file src="src/ios/Diagnostic_Calendar.m" />
-        <!--END_MODULE CALENDAR-->
+        --><!--END_MODULE CALENDAR-->
 
-        <!--BEGIN_MODULE REMINDERS-->
+        <!--BEGIN_MODULE REMINDERS--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Reminders">
                 <param name="ios-package" value="Diagnostic_Reminders" />
@@ -239,9 +241,9 @@
         
         <header-file src="src/ios/Diagnostic_Reminders.h" />
         <source-file src="src/ios/Diagnostic_Reminders.m" />
-        <!--END_MODULE REMINDERS-->
+        --><!--END_MODULE REMINDERS-->
 
-        <!--BEGIN_MODULE MOTION-->
+        <!--BEGIN_MODULE MOTION--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Motion">
                 <param name="ios-package" value="Diagnostic_Motion" />
@@ -261,7 +263,7 @@
 
         <header-file src="src/ios/Diagnostic_Motion.h" />
         <source-file src="src/ios/Diagnostic_Motion.m" />
-        <!--END_MODULE MOTION-->
+        --><!--END_MODULE MOTION-->
     </platform>
 
     <platform name="android">
@@ -305,11 +307,11 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-
+        <!--
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.BLUETOOTH" />
         </config-file>
-
+        -->
         <js-module name="Diagnostic_Bluetooth" src="www/android/diagnostic.bluetooth.js">
             <merges target="cordova.plugins.diagnostic.bluetooth" />
         </js-module>
@@ -332,7 +334,7 @@
         <source-file src="src/android/Diagnostic_Wifi.java" target-dir="src/cordova/plugins" />
         <!--END_MODULE WIFI-->
 
-        <!--BEGIN_MODULE CAMERA-->
+        <!--BEGIN_MODULE CAMERA--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Camera" >
                 <param name="android-package" value="cordova.plugins.Diagnostic_Camera"/>
@@ -345,9 +347,9 @@
         </js-module>
 
         <source-file src="src/android/Diagnostic_Camera.java" target-dir="src/cordova/plugins" />
-        <!--END_MODULE CAMERA-->
+        --><!--END_MODULE CAMERA-->
 
-        <!--BEGIN_MODULE NOTIFICATIONS-->
+        <!--BEGIN_MODULE NOTIFICATIONS--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_Notifications" >
                 <param name="android-package" value="cordova.plugins.Diagnostic_Notifications"/>
@@ -360,27 +362,27 @@
         </js-module>
 
         <source-file src="src/android/Diagnostic_Notifications.java" target-dir="src/cordova/plugins" />
-        <!--END_MODULE NOTIFICATIONS-->
+        --><!--END_MODULE NOTIFICATIONS-->
 
-        <!--BEGIN_MODULE MICROPHONE-->
+        <!--BEGIN_MODULE MICROPHONE--><!--
         <js-module name="Diagnostic_Microphone" src="www/android/diagnostic.microphone.js">
             <merges target="cordova.plugins.diagnostic.microphone" />
         </js-module>
-        <!--END_MODULE MICROPHONE-->
+        --><!--END_MODULE MICROPHONE-->
 
-        <!--BEGIN_MODULE CONTACTS-->
+        <!--BEGIN_MODULE CONTACTS--><!--
         <js-module name="Diagnostic_Contacts" src="www/android/diagnostic.contacts.js">
             <merges target="cordova.plugins.diagnostic.contacts" />
         </js-module>
-        <!--END_MODULE CONTACTS-->
+        --><!--END_MODULE CONTACTS-->
 
-        <!--BEGIN_MODULE CALENDAR-->
+        <!--BEGIN_MODULE CALENDAR--><!--
         <js-module name="Diagnostic_Calendar" src="www/android/diagnostic.calendar.js">
             <merges target="cordova.plugins.diagnostic.calendar" />
         </js-module>
-        <!--END_MODULE CALENDAR-->
+        --><!--END_MODULE CALENDAR-->
 
-        <!--BEGIN_MODULE NFC-->
+        <!--BEGIN_MODULE NFC--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_NFC" >
                 <param name="android-package" value="cordova.plugins.Diagnostic_NFC"/>
@@ -393,9 +395,9 @@
         </js-module>
 
         <source-file src="src/android/Diagnostic_NFC.java" target-dir="src/cordova/plugins" />
-        <!--END_MODULE NFC-->
+        --><!--END_MODULE NFC-->
 
-        <!--BEGIN_MODULE EXTERNAL_STORAGE-->
+        <!--BEGIN_MODULE EXTERNAL_STORAGE--><!--
         <config-file target="config.xml" parent="/*">
             <feature name="Diagnostic_External_Storage" >
                 <param name="android-package" value="cordova.plugins.Diagnostic_External_Storage"/>
@@ -408,6 +410,6 @@
         </js-module>
 
         <source-file src="src/android/Diagnostic_External_Storage.java" target-dir="src/cordova/plugins" />
-        <!--END_MODULE EXTERNAL_STORAGE-->
+        --><!--END_MODULE EXTERNAL_STORAGE-->
     </platform>
 </plugin>
