@@ -1,6 +1,23 @@
 Cordova diagnostic plugin [![Latest Stable Version](https://img.shields.io/npm/v/cordova.plugins.diagnostic.svg)](https://www.npmjs.com/package/cordova.plugins.diagnostic) [![Total Downloads](https://img.shields.io/npm/dt/cordova.plugins.diagnostic.svg)](https://npm-stat.com/charts.html?package=cordova.plugins.diagnostic)
 =========================
 
+## Why this fork exists
+
+Forked from [dpa99c/cordova-diagnostic-plugin](https://github.com/dpa99c/cordova-diagnostic-plugin).
+Consumed via a git branch reference (`github:herdwatch-apps/cordova-diagnostic-plugin#7.2.3-custom`),
+not an npm release — there's no publish workflow for this fork.
+
+Diff summary vs upstream `7.2.3` (on this `7.2.3-custom` branch):
+- Commented out the iOS `Info.plist` usage-description injections and feature/module registrations
+  for Camera, Notifications, Microphone, Contacts and Calendar (Location and Bluetooth are kept) —
+  this app only uses the `LOCATION`, `BLUETOOTH` and `WIFI` diagnostic modules
+  (`cordova.plugins.diagnostic.modules` preference in the consuming app's `config.xml`), and unused
+  permission usage-description strings are a common App Store review rejection.
+- Fixed a `ClassCastException` in `Diagnostic_Bluetooth.requestBluetoothAuthorization` when the first
+  argument isn't a `JSONArray`.
+- Removed the `postinstall` script (`scripts/apply-modules.js`), which isn't needed for this
+  module-disabling approach and caused install issues in the consuming app.
+
 <!-- doctoc README.md --maxlevel=3 -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
